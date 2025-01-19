@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import WhatWeDo from "@/components/WhatWeDo";
 import Achievements from "@/components/Achievements";
+import TradingProcess from "@/components/TradingProcess";
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <Features />
       <WhatWeDo />
       <Achievements />
+      <TradingProcess />
     </div>
   );
 };
