@@ -4,6 +4,9 @@ import Features from "@/components/Features";
 import WhatWeDo from "@/components/WhatWeDo";
 import Achievements from "@/components/Achievements";
 import TradingProcess from "@/components/TradingProcess";
+import InvestmentTypes from "@/components/InvestmentTypes";
+import Benefits from "@/components/Benefits";
+import KeyTasks from "@/components/KeyTasks";
 
 const Index = () => {
   return (
@@ -14,6 +17,9 @@ const Index = () => {
       <WhatWeDo />
       <Achievements />
       <TradingProcess />
+      <InvestmentTypes />
+      <Benefits />
+      <KeyTasks />
     </div>
   );
 };
