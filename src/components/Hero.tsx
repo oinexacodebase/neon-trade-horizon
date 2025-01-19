@@ -10,7 +10,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
-          <span className="text-white">Cryptocurrency </span>
+          <span className="text-neon-green">Cryptocurrency </span>
           <span className="bg-gradient-to-r from-neon-green to-neon-purple bg-clip-text text-transparent">
             Traders
           </span>
