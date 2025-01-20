@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Bitcoin, Ethereum, Coins } from "lucide-react";
+import { Bitcoin, Wallet, CircleDollarSign } from "lucide-react";
 
 const cryptoData = [
   {
@@ -12,13 +12,13 @@ const cryptoData = [
     name: "Ethereum",
     symbol: "ETH",
     description: "Smart contract platform enabling decentralized applications and DeFi.",
-    icon: Ethereum,
+    icon: Wallet,
   },
   {
     name: "Binance Coin",
     symbol: "BNB",
     description: "Native token of Binance ecosystem, used for trading and payments.",
-    icon: Coins,
+    icon: CircleDollarSign,
   },
 ];
 
