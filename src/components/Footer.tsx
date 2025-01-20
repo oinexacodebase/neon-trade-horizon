@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -15,24 +16,19 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-neon-green transition-colors">
+                <Link to="/about" className="text-gray-400 hover:text-neon-green transition-colors">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-neon-green transition-colors">
-                  Features
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-neon-green transition-colors">
+                <Link to="/pricing" className="text-gray-400 hover:text-neon-green transition-colors">
                   Pricing
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-neon-green transition-colors">
+                <Link to="/contact" className="text-gray-400 hover:text-neon-green transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -40,19 +36,19 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Legal</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-neon-green transition-colors">
+                <Link to="/terms-of-service" className="text-gray-400 hover:text-neon-green transition-colors">
                   Terms of Service
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-neon-green transition-colors">
+                <Link to="/privacy-policy" className="text-gray-400 hover:text-neon-green transition-colors">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-neon-green transition-colors">
+                <Link to="/cookie-policy" className="text-gray-400 hover:text-neon-green transition-colors">
                   Cookie Policy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
