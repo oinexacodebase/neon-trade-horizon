@@ -1,69 +1,133 @@
-# Welcome to your Lovable project
+# CryptoTrade - Modern Crypto Trading Platform
 
-## Project info
+![CryptoTrade](public/og-image.png)
 
-**URL**: https://lovable.dev/projects/b2a0d578-8c5d-4d53-ac3a-33809e84d762
+A sophisticated, cyberpunk-themed cryptocurrency trading platform built with modern web technologies. This project provides a sleek, responsive interface for crypto trading operations with real-time data visualization and secure user interactions.
 
-## How can I edit this code?
+## 🚀 Features
 
-There are several ways of editing your application.
+- **Modern UI/UX**: Cyberpunk-inspired design with neon accents and fluid animations
+- **Responsive Design**: Fully responsive across all devices and screen sizes
+- **Real-time Trading Interface**: Dynamic charts and trading components
+- **Interactive Maps**: Location-based services with Google Maps integration
+- **Comprehensive Documentation**: Detailed pricing plans and trading guides
+- **Legal Compliance**: Integrated Terms of Service, Privacy Policy, and Cookie Policy
 
-**Use Lovable**
+## 🛠 Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b2a0d578-8c5d-4d53-ac3a-33809e84d762) and start prompting.
+- **Frontend Framework**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS with custom animations
+- **UI Components**: shadcn/ui
+- **Icons**: Lucide React
+- **Charts**: Recharts
+- **Maps**: Google Maps API
+- **State Management**: TanStack Query (React Query)
+- **Routing**: React Router DOM
+- **Animations**: Framer Motion
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📦 Project Structure
 
-**Use your preferred IDE**
+```
+src/
+├── components/         # Reusable UI components
+├── pages/             # Page components and routes
+├── hooks/             # Custom React hooks
+├── lib/              # Utility functions and helpers
+└── styles/           # Global styles and Tailwind config
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🎨 Design Features
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Color Scheme**: Neon green (#00FF00) and purple (#800080) accents
+- **Typography**: Modern, readable fonts optimized for trading interfaces
+- **Animations**: Smooth transitions and interactive elements
+- **Layout**: Intuitive navigation with responsive grid systems
 
-Follow these steps:
+## 🚀 Getting Started
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. Clone the repository:
+```bash
+git clone <repository-url>
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Install dependencies:
+```bash
+npm install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open [http://localhost:8080](http://localhost:8080) in your browser
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📱 Responsive Design
 
-**Use GitHub Codespaces**
+The application is optimized for:
+- Desktop (1200px+)
+- Laptop (1024px)
+- Tablet (768px)
+- Mobile (320px+)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🔧 Configuration
 
-## What technologies are used for this project?
+Key configuration files:
+- `vite.config.ts`: Vite configuration
+- `tailwind.config.ts`: Tailwind CSS customization
+- `tsconfig.json`: TypeScript configuration
 
-This project is built with .
+## 🌐 API Integration
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+To enable Google Maps functionality:
+1. Obtain a Google Maps API key
+2. Replace `YOUR_GOOGLE_MAPS_API_KEY` in the Contact component
 
-## How can I deploy this project?
+## 📄 Legal Documents
 
-Simply open [Lovable](https://lovable.dev/projects/b2a0d578-8c5d-4d53-ac3a-33809e84d762) and click on Share -> Publish.
+The platform includes:
+- Terms of Service
+- Privacy Policy
+- Cookie Policy
 
-## I want to use a custom domain - is that possible?
+## 🎯 Use Cases
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+- Cryptocurrency trading platforms
+- Digital asset management interfaces
+- Crypto portfolio tracking systems
+- Trading education platforms
+
+## ⚡ Performance
+
+- Optimized bundle size
+- Lazy loading of components
+- Efficient state management
+- Responsive image loading
+
+## 🔒 Security
+
+- Type-safe development with TypeScript
+- Secure form handling
+- Protected API endpoints
+- Data validation
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## ✨ Credits
+
+Designed and developed by [Avodstudio](https://avodstudio.com)
+
+## 📧 Contact
+
+For any inquiries, please reach out through the contact form on our website.
+
+---
+
+Made with ❤️ by Avodstudio
