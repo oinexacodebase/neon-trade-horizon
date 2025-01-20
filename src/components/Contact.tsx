@@ -2,31 +2,40 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { MapPin, Mail, Phone } from "lucide-react";
-import { useRef, useEffect } from "react";
-import mapboxgl from "mapbox-gl";
-import "mapbox-gl/dist/mapbox-gl.css";
+import { useRef } from "react";
+import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
 const Contact = () => {
-  const mapContainer = useRef<HTMLDivElement>(null);
-  const map = useRef<mapboxgl.Map | null>(null);
+  const mapRef = useRef<google.maps.Map | null>(null);
 
-  useEffect(() => {
-    if (!mapContainer.current) return;
+  const mapContainerStyle = {
+    width: '100%',
+    height: '100%'
+  };
 
-    // Note: Replace with your Mapbox token
-    mapboxgl.accessToken = "YOUR_MAPBOX_TOKEN";
-    
-    map.current = new mapboxgl.Map({
-      container: mapContainer.current,
-      style: "mapbox://styles/mapbox/dark-v11",
-      center: [-74.006, 40.7128], // Default to NYC
-      zoom: 12
-    });
+  const center = {
+    lat: 40.7128,
+    lng: -74.006
+  };
 
-    return () => {
-      map.current?.remove();
-    };
-  }, []);
+  const options = {
+    styles: [
+      {
+        elementType: "geometry",
+        stylers: [{ color: "#242f3e" }]
+      },
+      {
+        elementType: "labels.text.stroke",
+        stylers: [{ color: "#242f3e" }]
+      },
+      {
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#746855" }]
+      }
+    ],
+    disableDefaultUI: true,
+    zoomControl: true,
+  };
 
   return (
     <section className="py-16 px-4" id="contact">
@@ -71,7 +80,17 @@ const Contact = () => {
             </CardContent>
           </Card>
           <div className="h-[500px] rounded-lg overflow-hidden border border-neon-green/20">
-            <div ref={mapContainer} className="w-full h-full" />
+            <LoadScript googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY">
+              <GoogleMap
+                mapContainerStyle={mapContainerStyle}
+                center={center}
+                zoom={12}
+                options={options}
+                onLoad={map => {
+                  mapRef.current = map;
+                }}
+              />
+            </LoadScript>
           </div>
         </div>
       </div>
