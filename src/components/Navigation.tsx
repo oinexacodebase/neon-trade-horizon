@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
-    { name: "Home", href: "#" },
-    { name: "About", href: "#about" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -17,20 +19,24 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <span className="text-neon-green font-bold text-xl">CryptoTrade</span>
+            <Link to="/" className="text-neon-green font-bold text-xl">CryptoTrade</Link>
           </div>
           
           {/* Desktop menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
-                  className="text-gray-300 hover:text-neon-green px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  to={item.href}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    location.pathname === item.href
+                      ? "text-neon-green"
+                      : "text-gray-300 hover:text-neon-green"
+                  }`}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <Button
                 className="bg-neon-green hover:bg-neon-green/80 text-black font-bold"
@@ -61,13 +67,18 @@ const Navigation = () => {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
-                className="text-gray-300 hover:text-neon-green block px-3 py-2 rounded-md text-base font-medium"
+                to={item.href}
+                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  location.pathname === item.href
+                    ? "text-neon-green"
+                    : "text-gray-300 hover:text-neon-green"
+                }`}
+                onClick={() => setIsOpen(false)}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
             <Button
               className="w-full bg-neon-green hover:bg-neon-green/80 text-black font-bold mt-4"
