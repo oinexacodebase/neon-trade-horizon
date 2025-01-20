@@ -7,6 +7,10 @@ import TradingProcess from "@/components/TradingProcess";
 import InvestmentTypes from "@/components/InvestmentTypes";
 import Benefits from "@/components/Benefits";
 import KeyTasks from "@/components/KeyTasks";
+import RecommendedCrypto from "@/components/RecommendedCrypto";
+import PricingPlans from "@/components/PricingPlans";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -17,9 +21,13 @@ const Index = () => {
       <WhatWeDo />
       <Achievements />
       <TradingProcess />
+      <RecommendedCrypto />
       <InvestmentTypes />
       <Benefits />
       <KeyTasks />
+      <PricingPlans />
+      <Contact />
+      <Footer />
     </div>
   );
 };
